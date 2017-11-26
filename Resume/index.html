@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+<title>王江 - 简历</title>
+<link href="1http://fonts.googleapis.com/css?family=Merriweather:400,300,700" rel="stylesheet" type="text/css">
+<link href="1http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+<style>body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+  
+  border-radius:10em;
+  height:4em;
+  width:4em;
+  
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+  
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+  
+  cursor:pointer;
+  
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+  
+  margin:0;
+  
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+  
+  background-color:white;
+  width:60%;
+  
+  padding:0.5em 0 0.5em 0;
+  
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+@media(max-width:992px) {
+  .paper {
+    width:80%;
+  }
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+  
+  padding-top:1.5em;
+  
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+  
+  color: #212121;
+  
+  font-size:0.975em;
+  
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+  
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+  
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  display:inline-block;
+  
+}
+
+.content-text ul li:first-child {
+  width:35%;
+  
+  color: #424242;
+  
+  font-weight:600;
+}
+
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  padding-left:0.5em;
+  
+  border-left:1px solid #e0e0e0;
+  
+}
+
+.education-listing > .heading {
+  font-weight:600;
+  
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:32%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+}
+
+section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+div.content-text.skills-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.skills-listing > p > {
+  color:#212121;
+}
+
+@media screen and (max-width: 600px) {
+  body, html {
+    padding-top: 30px;
+  }
+
+  .paper {
+    width:95%;
+  }
+
+  .row div {
+    display: block;
+  }
+
+  .content-cat {
+    width: 100%;
+  }
+
+  .content-text ul li {
+    width: 100%;
+  }
+
+  .content-text ul li:first-child {
+    width: 100%;
+  }
+  
+  .education-listing > .highlight {
+    margin-left: 30px;
+  }
+}</style>
+<style media="print">
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.profiles {
+  display:none;
+}
+
+.content {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+
+<div class="resume-wrapper">
+  <article class="paper">
+  <header>
+  <div class="header-content">
+    <div class="header-pic" title="Wiggle Wiggle">
+      <img src="https://avatars0.githubusercontent.com/u/30932726?v=4&s=460" class="pic">
+    </div>
+    <div class="header-text">
+      <p>王 江</p>
+      <p class="subtitle">产品/运营</p>
+    </div>
+  </div>
+  </header>
+  <div class="content-wrapper">
+    <section class="content">
+    <div class="row">
+      <div class="content-cat">联系方式</div>
+      <div class="content-text">
+        <ul>
+          <li>个人网站</li>
+          <li>https://loveeric.github.io</li>
+        </ul>
+        <ul>
+          <li>邮箱</li>
+          <li><a href="mailto:2601422@qq.com" class="__cf_email__">[2601422@qq.com]</a></li>
+        </ul>
+        <ul>
+          <li>电话</li>
+          <li>(+86) 189-6669-0909</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+    <section class="content">
+    <div class="row">
+      <div class="content-cat">个人信息</div>
+      <div class="content-text">
+        <ul>
+          <li>性别</li>
+          <li>男</li>
+        </ul>
+        <ul>
+          <li>出生年月</li>
+          <li>1980-08</li>
+        </ul>
+        <ul>
+          <li>年龄</li>
+          <li>37</li>
+        </ul>
+        <ul>
+          <li>婚姻状况</li>
+          <li>已婚已育</li>
+        </ul>
+        <ul>
+          <li>工作年限</li>
+          <li>17年</li>
+        </ul>
+        <ul>
+          <li>毕业院校</li>
+          <li>西北大学</li>
+        </ul>
+        <ul>
+          <li>地址</li>
+          <li>天河区 . 广州市 . 广东省</li>
+        </ul>
+        
+      </div>
+    </div>
+    </section>
+<!-- job aims -->
+    <section class="content">
+    <div class="row">
+      <div class="content-cat">职业目标</div>
+      <div class="content-text skills-listing">
+        <p>
+          <span class="name">
+          <strong>产品</strong>
+          </span>
+          <span>(互联网):</span>经理，总监
+        </p>
+        <p>
+          <span class="name">
+          <strong>运营</strong>
+          </span>
+          <span>(互联网):</span>经理，总监
+        </p>
+      </div>
+    </div>
+    </section>
+<!-- Self introduction -->
+<section class="content">
+    <div class="row">
+      <div class="content-cat">核心能力</div>
+      <div class="content-text">
+        <ul>
+          <li>业务理解</li>
+          <li>☆☆☆☆☆</li>
+        </ul>
+        <ul>
+          <li>产品规划</li>
+          <li>☆☆☆☆</li>
+        </ul>
+        <ul>
+          <li>产品设计</li>
+          <li>☆☆☆☆</li>
+        </ul>
+        <ul>
+          <li>体验设计</li>
+          <li>☆☆☆☆☆</li>
+        </ul>
+        <ul>
+          <li>团队协作</li>
+          <li>☆☆☆☆</li>
+        </ul>
+        <ul>
+          <li>沟通能力</li>
+          <li>☆☆☆☆☆</li>
+        </ul>
+        <ul>
+          <li>学习能力</li>
+          <li>☆☆☆☆☆</li>
+        </ul>
+      </div>
+    </div>
+    </section>
+
+    <section class="content">
+    <div class="row">
+      <div class="content-cat">自我评价</div>
+      <div class="content-text work-listing education-listing">
+        <p>
+          <strong>互联网+</strong>
+        </p>
+        <p style="text-indent: 2em;">
+          擅长移动互联网、互联网及传统PC应用、APP、微信开放平台等各平台产品、功能及界面规划设计，各级界面操作规范体系，UX设计管理。有良好的团队组织协调能力，能带团队共同提高。有扎实的计算机基础、界面视觉交互设计、平面设计理论和实践基础，精通设计相关工具，熟悉移动互联网UI开发技术，熟练掌握web标准及前端技术，与各平台开发团队配合顺畅。善于学习实践，善于发觉人与产品及服务之间的关系，在可用性和用户体验中寻求最佳方案，把最有价值的信息快捷的传送到用户面前，不论何时何地让用户和产品无缝连接，比用户更懂用户，观察用户和研究用户的需求面，找到并提炼出观点，让更多人知道来帮助解决用户的需求点。，提倡利用主流界面理论结合技术手段改进工作过程，提高效率。对用户体验相关理论有深入了解和认知，熟悉产品设计、界面设计与评估的过程，能结合项目实际开展实践。善于思考、分析和归纳，思维清晰敏捷，逻辑分析能力强。
+
+        </p>
+        <p style="margin-top:2.4em;" class="highlight">
+        主持参与过众多产品/项目，类型涉及PC互联网、移动互联网、微信开发、小程序开发、移动支付、web2.0应用、门户网站、pc客户端、触摸屏终端等，产品业务领域主要涉及媒体平台，互联网金融、智能消费品、通讯、石油、电力、天然气、教育、电子政务、电子商务等。
+        </p>
+        <p style="margin-top:2.4em;">
+          一直努力于网络前端技术、全栈技术开发、后台服务系统、服务器系统、用户体验、网络互动营销、电子支付、电子商务等多种服务。
+        </p>
+        
+        
+      </div>
+    </div>
+    </section>
+  <!--Work Experience-->
+    <section class="content">
+    <div class="row">
+      <div class="content-cat big-text">工作经历<p>
+          2013-12-01 至 今
+        </p>
+      </div>
+      <div class="content-text work-listing education-listing">
+        <p style="margin-top:2.4em;">
+          <strong>西安玩聚网络科技有限公司</strong>
+          <strong><a href="https://www.wanjunetwork.com">www.wanjunetwork.com</a></strong>
+        </p>
+        <p>
+         创始人之一，一个本土化互联网创业团队，致力于服务西安，展示西安，集创意、策划、设计、开发于一体，主要服务于网站应用开发、微信开发、数字化品牌营销、企业信息化应用、电子商务运营、移动端产品开发、app应用与移动网站设计开发等相关领域。
+        </p>
+        <p class="highlight"><strong>公司运营项目</strong></p>
+        <ul class="highlight">
+          <li>玩聚西安</li>
+          <li><a href="http://www.helloxa.com">HelloXA.COM</a></li>
+          <li style="margin-left: 2em;">本土化综合性媒体平台</li>
+        </ul>
+        <ul class="highlight">
+          <li>西安人文</li>
+          <li><a href="http://www.helloxa.cn">HelloXA.CN</a></li>
+          <li style="margin-left: 2em;">本土化人文服务平台</li>
+        </ul>
+        <ul class="highlight">
+          <li>玩聚西安APP</li>
+          <li><a href="http://www.wanjuxian.com">wanjuxian.com</a></li>
+          <li style="margin-left: 2em;">App Website</li>
+        </ul>
+        <ul class="highlight">
+          <li>秦付通</li>
+          <li><a href="http://www.qinft.com">qinft.com</a></li>
+          <li style="margin-left: 2em;">移动支付服务商，互联网+餐饮</li>
+        </ul>
+        <ul class="highlight">
+          <li>秦勇叔叔</li>
+          <li><a href="http://www.quncle.com">uncleQin.com</a></li>
+          <li style="margin-left: 2em;">“秦勇”卡通形象官网</li>
+        </ul>
+        <p style="margin-top:2.4em;" class="highlight"><strong>主要职责</strong><br>
+          1.  根据需求方案要求，给出运营策略和可行性分析。<br>
+          2.  负责内容规划、原型设计、UI设计。<br>
+          3.  负责产品团队的管理，编写设计文档、策划文档、保证产品顺便上线。<br>
+          4.  多部门合作、项目管理进度。<br>
+          5.  竞争策略的制定、计划、部署。<br>
+          6.  初期平台功能的修复和完善。<br>
+          7.运营数据的汇总，用户体验和运营体系。<br>
+        </p>
+      </div>
+    </div>
+    </section>
+    <section class="content">
+    <div class="row">
+      <div class="content-cat big-text">
+        <p>2005-06-01至2013-12-01</p>
+      </div>
+      <div class="content-text work-listing education-listing">
+        <p>
+          <strong>中钞科堡现金技术处理技术（北京）有限公司</strong>
+          <strong><a href="https://www.cbpm-keba.com">www.cbpm-keba.com</a></strong>
+        </p>
+        <p style="margin-top:2.4em;" class="highlight"><strong>职务：工程师</strong><br>
+          <strong>职责：</strong>主要负责存取款一体机（RATM）的销售及服务工作，包括售前、售中、售后服务。服务银行包括：招商银行、中国银行、兴业银行、交通银行、中信银行等。以招商银行为例，我公司针对招行“因您而变”的主要思想，在产品界面、操作流程，人机交互部分，开发出了同行业优秀的交互系统，对于招行定期发型的信用卡，及保险类理财类产品都做出了完美的诠释。
+        </p>
+      </div>
+    </div>
+    </section>
+    <section class="content">
+    <div class="row">
+      <div class="content-cat big-text">
+        <p>2000-01-01至2005-5-31</p>
+      </div>
+      <div class="content-text work-listing education-listing">
+        <p>
+          <strong>西安兰天计算机培训学校</strong>
+        </p>
+        <p style="margin-top:2.4em;" class="highlight"><strong>职务：教师+网络部主管</strong><br>
+          <strong>职责：</strong>授课，主讲课程“计算机硬件组装与维护”、“高级网络工程师”、“网页制作”兼“办公自动化”及“等级考试系列”。教学体系指定、大纲编写及所在培训机构书籍资料整理编著。多次受邀于多所高校专题授课。自己编著的计算机硬件及网络基础教程，被作为统一教材使用，西安电子科技大学出版发行。
+        </p>
+      </div>
+    </div>
+    </section>
+    <section class="content">
+    <div class="row">
+      <div class="content-cat">教育经历</div>
+      <div class="content-text skills-listing">
+        <p>
+          <span class="name">
+          <strong>1998 - 2002</strong>
+          </span>西北大学<span>（ 计算机应用 ）</span></p>
+      </div>
+    </div>
+    </section>
+    <section class="content">
+    <div class="row">
+      <div class="content-cat">获得奖励</div>
+      <div class="content-text skills-listing">
+        <p>
+          <span class="name">
+          <strong>2000年</strong>
+          </span>
+          <span>(西北大学)</span>“社会实践杰出表现”奖</p>
+        <p>
+          <span class="name">
+          <strong>2002年</strong>
+          </span>
+          <span>(西安兰天计算机培训学校)</span>“教学先进工作者”奖</p>
+          <p>
+          <span class="name">
+          <strong>2012年</strong>
+          </span>
+          <span>(中钞科堡现金技术处理技术（北京）有限公司公司)</span>“优秀员工”奖</p>
+      </div>
+    </div>
+    </section>
+    <section class="content">
+    <div class="row">
+      <div class="content-cat">兴趣爱好</div>
+      <div class="content-text skills-listing">
+        <p>
+          <span class="name">
+          <strong>绘画</strong>
+          </span>电影, 音乐, 羽毛球</p>
+      </div>
+    </div>
+    </section>
+  </div>
+  </article>
+</div>
+
+
+</body></html>
